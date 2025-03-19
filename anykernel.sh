@@ -4,7 +4,7 @@
 ### AnyKernel setup
 # global properties
 properties() { '
-kernel.string=BloodReaper+ Kernel by CuriousNom
+kernel.string=Flashing kernel images for gta4l series
 do.devicecheck=1
 do.modules=0
 do.systemless=1
