@@ -53,6 +53,12 @@ mv "$home/kernels/dtbo.img $home/dtbo.img"
 split_boot
 flash_boot
 
+ui_print ""
+ui_print "  --------------------------------------------------"
+ui_print "       DTB blob flashing in progress"
+ui_print "  --------------------------------------------------"
+ui_print ""
+
 ## vendor_boot shell variable
 block=vendor_boot
 is_slot_device=1
@@ -65,6 +71,12 @@ reset_ak
 # Flash vendor boot
 split_boot
 flash_boot
+
+ui_print ""
+ui_print "  --------------------------------------------------"
+ui_print "       DTBO image flashing in progress"
+ui_print "  --------------------------------------------------"
+ui_print ""
 
 # Flash DTBO
 flash_dtbo
