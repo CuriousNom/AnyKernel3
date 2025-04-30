@@ -24,13 +24,6 @@ no_block_display=1
 ## Import AnyKernel core functions
 . tools/ak3-core.sh
 
-## Detect ROM Flavor
-userflavor="$(file_getprop /system/build.prop ro.build.flavor)"
-case "$userflavor" in
-    aospa_pipa-user) os="aospa"; os_string="Paranoid Android ROM";;
-    *)              os="aosp";  os_string="AOSP ROM";;
-esac
-ui_print "  -> ${os_string} detected!"
 ui_print ""
 ui_print "  =================================================="
 ui_print "              BloodReaper Kernel Installer          "
