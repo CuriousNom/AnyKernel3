@@ -24,6 +24,7 @@ no_block_display=1
 ## Import AnyKernel core functions
 . tools/ak3-core.sh
 
+ui_print "  -> ${os_string} detected!"
 ui_print ""
 ui_print "  =================================================="
 ui_print "              BloodReaper Kernel Installer          "
@@ -44,42 +45,25 @@ ui_print "       BloodReaper Kernel installation in progress"
 ui_print "  --------------------------------------------------"
 ui_print ""
 
-## Prepare Kernel DTB DTBO
+## Prepare Kernel and DTB
 mv "$home/kernels/Image" "$home/Image"
 mv "$home/kernels/dtb" "$home/dtb"
-mv "$home/kernels/dtbo.img $home/dtbo.img"
 
-## Boot Partition
+## Boot Partition Flash
 split_boot
 flash_boot
 
-ui_print ""
-ui_print "  --------------------------------------------------"
-ui_print "       DTB blob flashing in progress"
-ui_print "  --------------------------------------------------"
-ui_print ""
-
-## vendor_boot shell variable
+## Vendor Boot Partition Flash
 block=vendor_boot
 is_slot_device=1
 ramdisk_compression=auto
 patch_vbmeta_flag=auto
 
-# Reset AnyKernel state for vendor_boot
+# Reset AnyKernel vendor_boot
 reset_ak
 
-# Flash vendor boot
 split_boot
 flash_boot
-
-ui_print ""
-ui_print "  --------------------------------------------------"
-ui_print "       DTBO image flashing in progress"
-ui_print "  --------------------------------------------------"
-ui_print ""
-
-# Flash DTBO
-flash_dtbo
 
 ui_print ""
 ui_print "  --------------------------------------------------"
