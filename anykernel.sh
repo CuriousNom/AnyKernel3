@@ -9,7 +9,7 @@ properties() { '
   do.systemless=1
   do.cleanup=1
   do.cleanuponabort=0
-  device.name1=pipa
+  device.name1=alioth
   supported.versions=
   supported.patchlevels=
 '; } # end properties
@@ -29,7 +29,7 @@ ui_print "  =================================================="
 ui_print "              BloodReaper Kernel Installer          "
 ui_print "  =================================================="
 ui_print ""
-ui_print "    Target Device  : Xiaomi Pad 6 (pipa)"
+ui_print "    Target Device  : Poco F3/Mi 11x (alioth)"
 ui_print "    Chipset        : Snapdragon 870"
 ui_print "    Maintainer     : Aryan (CuriousNom)"
 ui_print ""
