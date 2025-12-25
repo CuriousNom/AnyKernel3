@@ -47,10 +47,14 @@ ui_print ""
 ## Prepare Kernel and DTB
 mv "$home/kernels/Image" "$home/Image"
 mv "$home/kernels/dtb" "$home/dtb"
+mv "$home/kernels/dtbo.img" "$home/dtbo.img"
 
 ## Boot Partition Flash
 split_boot
 flash_boot
+
+## Flash DTBO
+flash_dtbo
 
 ## Vendor Boot Partition Flash
 block=vendor_boot
