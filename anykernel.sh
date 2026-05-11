@@ -26,22 +26,35 @@ no_block_display=1
 
 ui_print ""
 ui_print "  =================================================="
+sleep 0.15
 ui_print "               n0 Kernel Installer                  "
+sleep 0.15
 ui_print "  =================================================="
 ui_print ""
+sleep 0.15
 ui_print "    Target Device  : Xiaomi Pad 6 (pipa)"
+sleep 0.15
 ui_print "    Chipset        : Snapdragon 870"
+sleep 0.15
 ui_print "    Maintainer     : Aryan (CuriousNom)"
+sleep 0.15
 ui_print "    Core Dev       : EmanuelCN0 originally for alioth"
 ui_print ""
+sleep 0.15
 ui_print "  --------------------------------------------------"
+sleep 0.1
 ui_print "       Initializing flash environment..."
 ui_print ""
+sleep 0.2
 ui_print "       Mounting partitions..."
+sleep 0.2
 ui_print "       Extracting kernel image..."
+sleep 0.2
 ui_print "       Flashing boot partition..."
+sleep 0.2
 ui_print ""
 ui_print "       n0 Kernel installation in progress"
+sleep 0.1
 ui_print "  --------------------------------------------------"
 ui_print ""
 
