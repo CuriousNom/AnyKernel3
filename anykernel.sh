@@ -46,7 +46,7 @@ ui_print ""
 
 ## Prepare Kernel and DTB
 mv "$home/kernels/Image" "$home/Image"
-mv "$home/kernels/dtb.img" "$home/dtb.img"
+mv "$home/kernels/dtb" "$home/dtb"
 mv "$home/kernels/dtbo.img" "$home/dtbo.img"
 
 ## Boot Partition Flash
