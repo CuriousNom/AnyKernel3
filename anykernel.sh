@@ -26,7 +26,7 @@ no_block_display=1
 
 ui_print ""
 ui_print "  =================================================="
-ui_print "              BloodReaper Kernel Installer          "
+ui_print "          BloodReaper 5.4 Kernel Installer          "
 ui_print "  =================================================="
 ui_print ""
 ui_print "    Target Device  : Xiaomi Pad 6 (pipa)"
@@ -51,6 +51,10 @@ mv "$home/kernels/dtbo.img" "$home/dtbo.img"
 
 ## Boot Partition Flash
 split_boot
+
+# Patch SELinux to permissive
+patch_cmdline "androidboot.selinux=" "androidboot.selinux=permissive"
+
 flash_boot
 
 ## Flash DTBO
@@ -66,6 +70,10 @@ patch_vbmeta_flag=auto
 reset_ak
 
 split_boot
+
+# Patch SELinux to permissive in vendor_boot
+patch_cmdline "androidboot.selinux=" "androidboot.selinux=permissive"
+
 flash_boot
 
 ui_print ""
